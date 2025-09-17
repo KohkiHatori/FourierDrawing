@@ -20,7 +20,7 @@ https://potrace.sourceforge.net/
 ### 3. Python Packages
 Execute the following from the command line.
 ```
-cd API
+cd backend
 pip install -r requirements.txt
 ```
 

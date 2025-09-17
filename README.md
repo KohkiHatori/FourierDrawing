@@ -11,7 +11,7 @@ FourierDrawing is an interactive web application that demonstrates the mathemati
 
 ## 🌟 Live Demo
 
-![FourierDrawing Demo](https://user-images.githubusercontent.com/79348782/198857561-531d9705-e81f-4219-a8e2-4f63ab1243f0.png)
+![FourierDrawing Demo](https://user-images.githubusercontent.com/79348782/198857486-7f2923c9-e0df-4b5f-88fb-fcdb99626c29.mp4)
 
 *Example: The π symbol being drawn by 200 rotating vectors*
 
@@ -60,23 +60,25 @@ FourierDrawing is an interactive web application that demonstrates the mathemati
 
 ### **Backend (Python + FastAPI)**
 ```
-API/
-├── server.py          # FastAPI server and main endpoint
-├── coeff.py          # Fourier coefficient calculator
-├── bezier.py         # Bézier curve implementations
-├── svg.py            # SVG parser and path processor  
-├── complex_vector.py # Complex vector mathematics
-├── utils.py          # Utility functions
-└── config.py         # Configuration settings
+backend/
+├── API/
+│   ├── server.py          # FastAPI server and main endpoint
+│   ├── coeff.py          # Fourier coefficient calculator
+│   ├── bezier.py         # Bézier curve implementations
+│   ├── svg.py            # SVG parser and path processor  
+│   ├── complex_vector.py # Complex vector mathematics
+│   ├── utils.py          # Utility functions
+│   └── config.py         # Configuration settings
+└── README.md             # Backend-specific documentation
 ```
 
 ### **Frontend (Vanilla JavaScript + HTML5 Canvas)**
 ```
-front/
+frontend/
 ├── index.html        # Main application interface
-├── static/
-│   ├── js/index.js  # Animation engine and UI logic
-│   └── css/main.css # Responsive styling
+└── static/
+    ├── js/index.js  # Animation engine and UI logic
+    └── css/main.css # Responsive styling
 ```
 
 ## 🚀 Getting Started
@@ -122,7 +124,7 @@ front/
 
 2. **Set up Python environment**
    ```bash
-   cd API/API
+   cd backend/API
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    pip install -r requirements.txt
@@ -137,14 +139,14 @@ front/
 
 1. **Start the backend server**
    ```bash
-   cd API/API
+   cd backend/API
    python server.py
    ```
    Server will start on `http://localhost:3000`
 
 2. **Open the frontend**
    ```bash
-   cd ../../front
+   cd ../../frontend
    # Serve the files using any HTTP server, e.g.:
    python -m http.server 5500
    # Or use Live Server in VS Code
@@ -200,21 +202,21 @@ The final path is reconstructed by:
 2. Summing all vector contributions
 3. Tracing the path of the final point
 
-## 📊 Performance Metrics
+<!-- ## 📊 Performance Metrics
 
 - **Backend Processing**: ~0.1-2 seconds per image (depending on complexity)
 - **Frontend Rendering**: 60 FPS animation capability
 - **Memory Usage**: ~50MB for typical images
 - **Vector Capacity**: Up to 500+ vectors (200 default for optimal performance)
-- **Supported Image Sizes**: Up to 4K resolution
+- **Supported Image Sizes**: Up to 4K resolution -->
 
-## 🎨 Example Gallery
+<!-- ## 🎨 Example Gallery
 
 The application includes 50+ pre-processed example images:
 - Greek letters (π, φ, λ, ω, etc.)
 - Corporate logos (Tesla, Nike, Apple, etc.)
 - Mathematical symbols
-- Custom artwork
+- Custom artwork -->
 
 ## 🔧 Configuration
 
@@ -250,15 +252,6 @@ class Config:
 - Intuitive keyboard shortcuts
 - Real-time parameter adjustment without restart
 
-## 🤝 Contributing
-
-Contributions are welcome! Areas for improvement:
-- Additional curve types (quadratic Bézier, elliptical arcs)
-- WebGL acceleration for higher vector counts
-- Mobile touch controls
-- Batch processing capabilities
-- Export functionality (GIF, MP4)
-
 ## 📚 Educational Value
 
 This project demonstrates:
@@ -273,27 +266,3 @@ Perfect for:
 - Educators teaching Fourier analysis
 - Developers learning mathematical visualization
 - Anyone curious about the mathematics behind animations
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Fourier Series Theory**: Based on classical mathematical analysis
-- **Potrace**: Bitmap to vector conversion
-- **ImageMagick**: Image format handling
-- **FastAPI**: Modern Python web framework
-- **HTML5 Canvas**: High-performance 2D rendering
-
-## 📞 Contact
-
-**Your Name** - [your.email@example.com](mailto:your.email@example.com)
-
-Project Link: [https://github.com/yourusername/FourierDrawing](https://github.com/yourusername/FourierDrawing)
-
----
-
-*"Mathematics is the art of giving the same name to different things." - Henri Poincaré*
-
-**Transform your images into mathematical art with FourierDrawing!** 🎨✨

@@ -2,7 +2,7 @@ const api_url = "http://127.0.0.1:3000/image";
 
 async function upload() {
   // This function is called when the upload button on html is pressed.
-  // It uploads the input image to the API and receives the drawing data of the image. If there is no file selected, it gives an error.
+  // It uploads the input image to the backend API and receives the drawing data of the image. If there is no file selected, it gives an error.
   let formData = new FormData();
   if (fileupload.files.length > 0) {
     formData.append("file", fileupload.files[0]);
@@ -396,7 +396,7 @@ class ComplexVector {
 }
 
 function main(drawing_data) {
-  // This function is run once the drawing data from the API is fetched. It unpacks the drawing data and creates an Animation object using the data.
+  // This function is run once the drawing data from the backend API is fetched. It unpacks the drawing data and creates an Animation object using the data.
   const lims = drawing_data["lim"];
   sets_of_coeffs = drawing_data["sets_of_coeffs"];
   anim_instance = new Animation(lims, sets_of_coeffs);

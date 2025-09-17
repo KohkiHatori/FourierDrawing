@@ -9,7 +9,7 @@ class Config:
 
 
     """
-    API config 
+    Backend config 
     """
     IMAGE_PATH = "images"
     ACCEPTABLE_EXTENSIONS = ["jpeg", "jpg", "png", "pnm", "svg"]
