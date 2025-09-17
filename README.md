@@ -11,7 +11,7 @@ FourierDrawing is an interactive web application that demonstrates the mathemati
 
 ## 🌟 Live Demo
 
-![FourierDrawing Demo](https://user-images.githubusercontent.com/79348782/198857486-7f2923c9-e0df-4b5f-88fb-fcdb99626c29.mp4)
+https://user-images.githubusercontent.com/79348782/198857486-7f2923c9-e0df-4b5f-88fb-fcdb99626c29.mp4
 
 *Example: The π symbol being drawn by 200 rotating vectors*
 
