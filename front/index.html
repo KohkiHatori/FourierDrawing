@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fourier Drawing</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+
+
+  <div class="image-post-wrapper">
+    <div class="image-post">
+      <input type="file" name="file" id="fileupload" name="fileupload">
+      <button type="submit" role="button" id="upload-button" onclick="upload()">UPLOAD</button>
+    </div>
+  </div>
+  <!--This is a wrapper for the image post div. This is hidden after an image is posted and drawing data is returned by the server-->
+
+  <div class="animation-wrapper">
+
+
+    <div class="canvas-wrapper">
+      <canvas id="anim">
+      </canvas>
+      <canvas id="path">
+      </canvas>
+    </div>
+
+    <!--This is a wrapper for the two canvases-->
+
+
+    <div class="control-panel">
+
+
+      <button id="quit-button">QUIT</button>
+
+      <button id="clear-button">CLEAR</button>
+
+      <button id="toggle-animation"></button>
+
+
+      <div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-circle" checked>
+          <span class="toggle"></span>
+        </label>
+      </div>
+
+
+      <div>
+        <label class="switch">
+          <input type="checkbox" id="toggle-vector" checked>
+          <span class="toggle"></span>
+        </label>
+      </div>
+
+
+      <div class="slider-wrapper">
+        <label>Number of vectors:</label>
+        <input id="num-vec-slider" type="range" min="1" step="1">
+        <label id="num-vec"></label>
+      </div>
+
+
+      <div class="slider-wrapper">
+        <label>Speed:</label>
+        <input id="speed-slider" type="range" min="1" value="1" max="11" step="1">
+        <label id="speed">1</label>
+      </div>
+
+    </div>
+
+  </div>
+  <!--This is a wrapper for the canvases and the control panel. It's hidden at the start and shown once an image is posted to the server-->
+
+
+    <script src="static//js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+
+.image-post {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  /* These are for centering the image-post div horizontally and vertically*/
+}
+
+
+#fileupload {
+  margin: auto;
+}
+
+#upload-button {
+  margin: 10px;
+}
+
+.slider-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 5px;
+}
+
+.canvas-wrapper {
+  position: relative;
+  z-index: 1;
+  /*The z-index is specified to ensure that the control panel is above the canvas wrapper*/
+}
+
+.animation-wrapper {
+  display: none;
+}
+
+.control-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*This is to make the control panel top left corner*/
+  z-index: 2;
+  /*The z-index is specified to ensure that the control panel is above the canvas wrapper*/
+  display: flex;
+  flex-direction: row;
+  /* By making the control-panel horizontal, it's easier to see the animation*/
+}
+
+#anim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*This is to make the canvas fill the screen, as its width and height are set to the size of the screen in JavaScript*/
+  background-color: black;
+  z-index: inherit;
+  /*This makes the z-index the same as canvas-wrapper, which is lower that that of the control-panel*/
+}
+
+#path {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /*This is to make the canvas fill the screen, as its width and height are set to the size of the screen in JavaScript*/
+  background-color: transparent;
+  z-index: inherit;
+  /*This makes the z-index the same as canvas-wrapper, which is lower that that of the control-panel*/
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 36px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  /*This hides the input insdie the switch label*/
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 36px;
+}
+
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: 28px;
+  width: 28px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  /*This sets how much time it takes for the toggle button to be toggled*/
+  border-radius: 50%;
+  /*This adds a white circle in the toggle button*/
+}
+
+input:checked+.toggle {
+  background-color: cyan;
+  /*It sets the background colour of the button to cyan when it's pressed*/
+}
+
+input:focus+.toggle {
+  box-shadow: 0 0 1px cyan;
+  /*It casts a shadow on the toggle button when the cursor is on it*/
+}
+
+input:checked+.toggle:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  /*when the toggle button is pressed, the white circle moves by 26 px*/
+}
