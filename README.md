@@ -168,35 +168,27 @@ frontend/
 
 ## 🧮 Mathematical Foundation
 
-### Fourier Series Representation
+FourierDrawing is built on the mathematical principle that any closed curve can be decomposed into a series of rotating complex vectors. This approach leverages the fundamental theorem of Fourier analysis, which states that periodic functions can be expressed as infinite sums of sinusoidal components.
 
-Any closed curve can be represented as a sum of rotating complex vectors:
+### Core Concepts
 
-```
-f(t) = Σ(n=-∞ to ∞) cₙ × e^(2πint)
-```
+**Fourier Series Decomposition**: The application transforms input curves into their frequency domain representation, where each frequency corresponds to a rotating vector with specific amplitude and phase characteristics.
 
-Where:
-- `cₙ` are the complex Fourier coefficients
-- `n` represents the frequency (rotation speed)
-- `t` is the parameter (time)
+**Complex Vector Representation**: Each point on the original curve is represented as the sum of complex exponential functions, where the rotation speed of each vector corresponds to its harmonic frequency.
 
-### Coefficient Calculation
+**Coefficient Extraction**: The system calculates Fourier coefficients through analytical integration of Bézier curve segments, employing integration by parts techniques for both linear and cubic curve types.
 
-For each Bézier curve segment, coefficients are calculated using:
+**Path Synthesis**: The original curve is reconstructed by vector summation at discrete time intervals, creating the animated drawing effect where each vector contributes to the final traced path.
 
-```
-cₙ = ∫₀¹ f(t) × e^(-2πint) dt
-```
+### Implementation Details
 
-The integration is performed analytically for both linear and cubic Bézier curves using integration by parts.
+The mathematical framework handles:
+- Parametric curve representation using Bézier mathematics
+- Complex number arithmetic for rotation calculations  
+- Frequency domain analysis for optimal vector ordering
+- Geometric transformations for screen coordinate mapping
 
-### Path Reconstruction
-
-The final path is reconstructed by:
-1. Computing vector positions at each time step
-2. Summing all vector contributions
-3. Tracing the path of the final point
+**For detailed mathematical formulations, equations, and theoretical background, please refer to `Specification.pdf` included in this repository.**
 
 <!-- ## 📊 Performance Metrics
 
