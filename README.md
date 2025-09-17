@@ -61,15 +61,16 @@ FourierDrawing is an interactive web application that demonstrates the mathemati
 ### **Backend (Python + FastAPI)**
 ```
 backend/
-├── API/
-│   ├── server.py          # FastAPI server and main endpoint
-│   ├── coeff.py          # Fourier coefficient calculator
-│   ├── bezier.py         # Bézier curve implementations
-│   ├── svg.py            # SVG parser and path processor  
-│   ├── complex_vector.py # Complex vector mathematics
-│   ├── utils.py          # Utility functions
-│   └── config.py         # Configuration settings
-└── README.md             # Backend-specific documentation
+├── server.py          # FastAPI server and main endpoint
+├── coeff.py          # Fourier coefficient calculator
+├── bezier.py         # Bézier curve implementations
+├── svg.py            # SVG parser and path processor  
+├── complex_vector.py # Complex vector mathematics
+├── utils.py          # Utility functions
+├── config.py         # Configuration settings
+├── requirements.txt  # Python dependencies
+├── example_pictures/ # Sample images for testing
+└── README.md         # Backend-specific documentation
 ```
 
 ### **Frontend (Vanilla JavaScript + HTML5 Canvas)**
@@ -124,29 +125,24 @@ frontend/
 
 2. **Set up Python environment**
    ```bash
-   cd backend/API
+   cd backend
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    pip install -r requirements.txt
-   ```
-
-3. **Install additional dependencies**
-   ```bash
-   pip install fastapi uvicorn python-multipart
    ```
 
 ### Running the Application
 
 1. **Start the backend server**
    ```bash
-   cd backend/API
+   cd backend
    python server.py
    ```
    Server will start on `http://localhost:3000`
 
 2. **Open the frontend**
    ```bash
-   cd ../../frontend
+   cd ../frontend
    # Serve the files using any HTTP server, e.g.:
    python -m http.server 5500
    # Or use Live Server in VS Code

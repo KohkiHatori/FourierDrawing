@@ -206,7 +206,7 @@ class SVG:
 
 
 if __name__ == "__main__":
-    with open("/Users/kohkihatori/NEA/backend/pictures/apple.svg", "r") as f:
+    with open("example_pictures/apple.svg", "r") as f:
         file = f.read()
     tes = SVG(file)
     funcs = tes.parse_path()

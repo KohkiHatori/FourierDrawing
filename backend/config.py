@@ -9,7 +9,7 @@ class Config:
 
 
     """
-    Backend config 
+    Backend config
     """
     IMAGE_PATH = "images"
     ACCEPTABLE_EXTENSIONS = ["jpeg", "jpg", "png", "pnm", "svg"]
@@ -27,4 +27,3 @@ class Config:
     # PATH_COLOURS = ["purple"]
     # AXIS = "off"
     # VEC_DISPLAY_THRESHOLD = 10
-
